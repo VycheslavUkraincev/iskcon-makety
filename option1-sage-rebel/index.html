@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Харе Крішна Чернівці — Твоя територія внутрішньої свободи</title>
+<meta name="description" content="День відкритих дверей у Ведичному центрі. Щонеділі о 13:30, вул. Скальда 40А, Чернівці. Вхід вільний.">
+<style>
+:root{
+  --olive:#6B7F3E; --olive-dark:#4A5A2A;
+  --greige:#B8A88A; --greige-light:#D6CBB5;
+  --navy:#1E3A5F; --navy-dark:#142A45;
+  --paper:#F5F0E8; --paper-dark:#EDE6D6;
+  --ink:#2A2620; --muted:#6B6558;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.7}
+h1,h2,h3{font-weight:700;line-height:1.25}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:70px 0}
+
+/* Header */
+header{background:var(--navy-dark);color:#fff;padding:14px 0;position:sticky;top:0;z-index:100}
+header .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.15rem;letter-spacing:.12em;font-weight:700}
+nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:.95rem;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,var(--olive-dark) 100%);color:#fff;padding:100px 0 80px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:var(--paper);clip-path:polygon(0 100%,100% 100%,100% 20%,0 100%)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:20px;max-width:800px}
+.hero h1 .accent{color:var(--greige-light)}
+.hero p.lead{font-size:1.25rem;max-width:640px;margin-bottom:30px;opacity:.92}
+.hero-meta{display:flex;gap:30px;flex-wrap:wrap;margin-bottom:35px;font-size:1.05rem}
+.hero-meta span{display:flex;align-items:center;gap:8px}
+.btn{display:inline-block;padding:14px 32px;border-radius:4px;text-decoration:none;font-family:inherit;font-size:1.05rem;font-weight:700;cursor:pointer;border:2px solid transparent;transition:.2s}
+.btn-primary{background:var(--olive);color:#fff}
+.btn-primary:hover{background:var(--olive-dark)}
+.btn-outline{border-color:#fff;color:#fff;background:transparent;margin-left:12px}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+
+/* Section titles */
+.sec-title{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:12px;color:var(--navy-dark)}
+.sec-sub{font-size:1.1rem;color:var(--muted);max-width:680px;margin-bottom:40px}
+
+/* Cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--greige-light);border-radius:8px;padding:30px;transition:.2s}
+.card:hover{box-shadow:0 8px 24px rgba(30,58,95,.1);transform:translateY(-2px)}
+.card h3{font-size:1.25rem;margin-bottom:10px;color:var(--navy-dark)}
+.card p{color:var(--muted);font-size:1rem}
+.card .icon{font-size:2.2rem;margin-bottom:14px;display:block}
+
+/* Myth-busting */
+.myths{background:var(--navy-dark);color:#fff}
+.myths .sec-title{color:#fff}
+.myths .sec-sub{color:var(--greige-light)}
+.myth{background:rgba(255,255,255,.06);border-left:4px solid var(--olive);border-radius:0 8px 8px 0;padding:24px 28px;margin-bottom:18px}
+.myth .q{font-size:1.15rem;font-weight:700;margin-bottom:8px;color:var(--greige-light)}
+.myth .a{opacity:.88}
+
+/* Stats */
+.stats{background:var(--paper-dark)}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.stat-num{font-size:2.6rem;font-weight:700;color:var(--olive-dark)}
+.stat-label{color:var(--muted);font-size:.95rem;margin-top:6px}
+
+/* Schedule */
+.schedule{background:#fff;border:1px solid var(--greige-light);border-radius:8px;overflow:hidden}
+.sched-row{display:flex;border-bottom:1px solid var(--paper-dark);padding:18px 28px;align-items:center}
+.sched-row:last-child{border:none}
+.sched-time{font-weight:700;color:var(--olive-dark);min-width:140px;font-size:1.05rem}
+.sched-what{flex:1}
+.sched-what strong{display:block;font-size:1.08rem}
+.sched-what span{color:var(--muted);font-size:.95rem}
+
+/* Food for Life */
+.ffl{background:linear-gradient(135deg,#FDF8EE,#F5EDD8);border-top:3px solid var(--olive)}
+.ffl .sec-title{color:var(--olive-dark)}
+
+/* FAQ */
+.faq-item{background:#fff;border:1px solid var(--greige-light);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:18px 24px;font-weight:700;cursor:pointer;font-size:1.08rem;display:flex;justify-content:space-between;align-items:center}
+.faq-q:hover{background:var(--paper)}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .3s;color:var(--muted)}
+.faq-item.open .faq-a{max-height:300px;padding:0 24px 20px}
+
+/* CTA */
+.cta{background:var(--olive-dark);color:#fff;text-align:center;padding:80px 0}
+.cta h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px}
+.cta p{font-size:1.15rem;opacity:.9;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* Footer */
+footer{background:var(--navy-dark);color:#fff;padding:50px 0 30px}
+footer .grid3{margin-bottom:30px}
+footer h4{margin-bottom:14px;font-size:1.05rem;color:var(--greige-light)}
+footer a{color:#fff;opacity:.8;text-decoration:none;display:block;margin-bottom:8px;font-size:.95rem}
+footer a:hover{opacity:1}
+.copyright{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);opacity:.6;font-size:.9rem}
+
+/* Marquee */
+.marquee{background:var(--navy);color:var(--greige-light);padding:14px 0;overflow:hidden;white-space:nowrap;font-size:1.1rem;letter-spacing:.05em}
+.marquee span{display:inline-block;animation:scroll 30s linear infinite;padding-right:50px}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+@media(max-width:768px){
+  .grid3,.grid2,.stat-grid{grid-template-columns:1fr}
+  nav{display:none}
+  .sched-row{flex-direction:column;align-items:flex-start;gap:6px}
+  .sched-time{min-width:auto}
+  section{padding:50px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">ХАРЕ КРІШНА · ЧЕРНІВЦІ</div>
+    <nav>
+      <a href="#about">Про нас</a>
+      <a href="#program">Програма</a>
+      <a href="#courses">Курси</a>
+      <a href="#ffl">Їжа Життя</a>
+      <a href="#faq">Питання</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<div class="marquee"><span>Харе Крішна Харе Крішна Крішна Крішна Харе Харе · Харе Рама Харе Рама Рама Рама Харе Харе · Харе Крішна Харе Крішна Крішна Крішна Харе Харе · Харе Рама Харе Рама Рама Рама Харе Харе ·&nbsp;</span></div>
+
+<section class="hero">
+  <div class="container">
+    <h1>Світ каже тобі поспішати.<br><span class="accent">Веди кажуть — зупинись.</span></h1>
+    <p class="lead">Якщо ви хоч раз чули «Харе Крішна» і запитували себе «що це означає?» — приходьте. Без фанатизму, без тиску. Просто подивіться самі.</p>
+    <div class="hero-meta">
+      <span>📅 Щонеділі, початок 13:30</span>
+      <span>📍 вул. Скальда, 40А</span>
+      <span>🎟️ Вхід вільний</span>
+    </div>
+    <a href="#program" class="btn btn-primary">Дізнатися більше</a>
+    <a href="#contacts" class="btn btn-outline">Приєднатися до руху</a>
+  </div>
+</section>
+
+<section id="awaits">
+  <div class="container">
+    <h2 class="sec-title">На вас чекають</h2>
+    <p class="sec-sub">Чотири прості речі. Нічого містичного — приходьте і перевірте.</p>
+    <div class="grid3">
+      <div class="card"><span class="icon">🎵</span><h3>Мантроспіви</h3><p>Колективне співання мантри Харе Крішна. Не треба вміти — просто слухайте.</p></div>
+      <div class="card"><span class="icon">📖</span><h3>Лекція</h3><p>Філософія Вед простою мовою: хто я, навіщо живу, що далі. Питання вітаються.</p></div>
+      <div class="card"><span class="icon">🍲</span><h3>Вегетаріанський обід</h3><p>Щедрий гарячий прасад — їжа, приготована з любов'ю. Безкоштовно для всіх.</p></div>
+    </div>
+    <div class="grid2" style="margin-top:24px">
+      <div class="card"><span class="icon">💬</span><h3>Спілкування</h3><p>Неформальні розмови, відповіді на питання. Ніхто не буде вас «обробляти».</p></div>
+      <div class="card"><span class="icon">🧘</span><h3>Тиша і спокій</h3><p>Місце, де можна просто побути собою. Без шуму, без поспіху, без масок.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="myths" id="myths">
+  <div class="container">
+    <h2 class="sec-title">Називаємо речі своїми іменами</h2>
+    <p class="sec-sub">Чесні відповіді на незручні питання. Бо ми поважаємо ваш розум.</p>
+    <div class="myth"><div class="q">«Це секта?»</div><div class="a">Ні. ІСККОН — офіційно зареєстрована релігійна організація, що діє в Україні з 1990-х років. Ми не ізолюємо людей, не забираємо майно, не забороняємо спілкування з родиною. Приходьте, подивіться, запитайте — і вирішуйте самі.</div></div>
+    <div class="myth"><div class="q">«Мене змусять щось купувати?»</div><div class="a">Ні. Вхід вільний, обід безкоштовний. Книги можна купити за бажанням — ніхто не ходить за вами з каталогом.</div></div>
+    <div class="myth"><div class="q">«Треба різко змінити життя?»</div><div class="a">Ні. Ми пропонуємо альтернативу, а не ультиматум. Спробуйте мантру, послухайте лекцію, поїжте прасад — далі вирішуйте самі, у своєму темпі.</div></div>
+    <div class="myth"><div class="q">«Я нічого не знаю про Веди — мені буде ніяково?»</div><div class="a">Більшість гостей приходять саме такими. Пояснюємо просто, терміни розшифровуємо. Ніякових питань не буває.</div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="sec-title">Про нас — коротко і по суті</h2>
+    <p class="sec-sub">ІСККОН — Міжнародне товариство свідомості Крішни. Рух бгакті-йоги, заснований 1966 року А.Ч. Бгактіведантою Свамі Прабгупадою.</p>
+    <div class="stat-grid">
+      <div><div class="stat-num">2000+</div><div class="stat-label">храмів і центрів у світі</div></div>
+      <div><div class="stat-num">516M</div><div class="stat-label">поширених духовних книг</div></div>
+      <div><div class="stat-num">3 млрд</div><div class="stat-label">порцій прасаду роздано</div></div>
+    </div>
+    <div class="grid2" style="margin-top:40px">
+      <div class="card"><h3>7 цілей ІСККОН</h3><p>Поширювати духовні знання · Проповідувати філософію свідомості Крішни · Зміцнювати єдність · Поширювати санкіртану · Будувати духовні громади · Жити просто і природно · Видавати духовну літературу</p></div>
+      <div class="card"><h3>Чому Чернівці?</h3><p>Бо шлях до усвідомленості починається там, де ви є. Наша громада — ваші сусіди, які обрали жити свідомо. Приходьте знайомитися.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="program" style="background:var(--paper-dark)">
+  <div class="container">
+    <h2 class="sec-title">Недільна програма</h2>
+    <p class="sec-sub">Щонеділі. Приходьте на будь-яку частину — або на все.</p>
+    <div class="schedule">
+      <div class="sched-row"><div class="sched-time">13:30 – 14:00</div><div class="sched-what"><strong>Мантроспіви</strong><span>Відкривальні молитви, налаштування на спокій</span></div></div>
+      <div class="sched-row"><div class="sched-time">14:00 – 15:00</div><div class="sched-what"><strong>Лекція з філософії</strong><span>Бгаґавад-Ґіта та Веди простою мовою</span></div></div>
+      <div class="sched-row"><div class="sched-time">15:00 – 16:00</div><div class="sched-what"><strong>Кіртан</strong><span>Колективне співання — серце програми</span></div></div>
+      <div class="sched-row"><div class="sched-time">16:00 – 17:30</div><div class="sched-what"><strong>Бенкет</strong><span>Гарячі вегетаріанські страви для всіх</span></div></div>
+      <div class="sched-row"><div class="sched-time">17:30 – 18:30</div><div class="sched-what"><strong>Спілкування</strong><span>Питання, розмови, нові знайомства</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ffl" id="ffl">
+  <div class="container">
+    <h2 class="sec-title">🍲 «Їжа Життя»</h2>
+    <p class="sec-sub">Ми просто годуємо людей. Теплою їжею, безкоштовно, щосуботи.</p>
+    <div class="grid2">
+      <div class="card"><h3>5 млн+ обідів</h3><p>роздано в Україні. Готуємо з 08:00 у храмі, роздаємо о 14:00 на Соборній площі.</p></div>
+      <div class="card"><h3>Станьте волонтером</h3><p>Потрібні руки: чистити овочі, готувати, роздавати. Приходьте в суботу зранку — або напишіть нам.</p><br><a href="#contacts" class="btn btn-primary">Долучитися</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="courses" style="background:#fff">
+  <div class="container">
+    <h2 class="sec-title">Курси і навчання</h2>
+    <p class="sec-sub">Хочете глибше? Обирайте напрям.</p>
+    <div class="grid3">
+      <div class="card"><span class="icon">🍳</span><h3>Ведична кулінарія</h3><p>Готуйте смачно без м'яса. Прасад, аюрведичні принципи, майстер-класи.</p></div>
+      <div class="card"><span class="icon">🥁</span><h3>Кіртан і музика</h3><p>Мриданга, каратали, фісгармонія. Навчіться грати і співати мантри.</p></div>
+      <div class="card"><span class="icon">📚</span><h3>Школа бгакті</h3><p>«Хто я?», Бгаґавад-Ґіта, філософія. Системне вивчення Вед.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="donation" style="background:var(--paper-dark)">
+  <div class="container">
+    <h2 class="sec-title">Підтримати храм</h2>
+    <p class="sec-sub">Кожна гривня йде на прасад, розвиток храму і «Їжу Життя».</p>
+    <div class="grid2">
+      <div class="card"><h3>💳 Онлайн</h3><p><a href="https://secure.wayforpay.com/donate/d645a94f6a237" style="color:var(--olive-dark)">Разова пожертва</a><br><a href="https://secure.wayforpay.com/donate/db52afa6592ea" style="color:var(--olive-dark)">Регулярна пожертва</a></p></div>
+      <div class="card"><h3>🏦 Реквізити</h3><p style="font-size:.92rem">РО «Релігійна громада свідомості Крішни в м. Чернівці»<br>ЄДРПОУ: 46285356<br>IBAN: UA563077700000026007111264936<br>Призначення: Добровільна пожертва</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2 class="sec-title">Часті питання</h2>
+    <p class="sec-sub">Якщо вашого питання тут немає — напишіть нам.</p>
+    <div class="faq-item"><div class="faq-q">Що вдягнути? <span>+</span></div><div class="faq-a">Що завгодно зручне. Дрес-коду немає.</div></div>
+    <div class="faq-item"><div class="faq-q">Чи можна з дітьми? <span>+</span></div><div class="faq-a">Так! Діти — бажані гості. Їм буде цікаво і смачно.</div></div>
+    <div class="faq-item"><div class="faq-q">Я не вегетаріанець — мені можна? <span>+</span></div><div class="faq-a">Звісно. Більшість гостей теж не вегетаріанці. Просто спробуйте.</div></div>
+    <div class="faq-item"><div class="faq-q">Скільки це коштує? <span>+</span></div><div class="faq-a">Нічого. Вхід вільний, обід безкоштовний. Пожертви — лише за бажанням.</div></div>
+    <div class="faq-item"><div class="faq-q">Що таке «прасад»? <span>+</span></div><div class="faq-a">Їжа, приготована з любов'ю і запропонована Богу. Вважається, що вона очищує свідомість.</div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Май сміливість дізнатися</h2>
+    <p>Твій шлях до усвідомленості починається тут, у Чернівцях. Щонеділі о 13:30.</p>
+    <a href="#contacts" class="btn btn-primary" style="font-size:1.2rem;padding:16px 40px">Приєднатися до руху</a>
+  </div>
+</section>
+
+<footer id="contacts">
+  <div class="container">
+    <div class="grid3">
+      <div><h4>Контакти</h4><a href="#">📍 вул. Скальда, 40А, Чернівці</a><a href="#">📱 Telegram — підписуйтесь та будьте в курсі всіх подій!</a><a href="#">📸 Instagram</a><a href="#">▶️ YouTube</a></div>
+      <div><h4>Навігація</h4><a href="#about">Про нас</a><a href="#program">Програма</a><a href="#ffl">Їжа Життя</a><a href="#faq">Питання</a></div>
+      <div><h4>Підтримати</h4><a href="#">💳 Пожертвувати</a><a href="#">🤝 Стати волонтером</a><p style="opacity:.6;font-size:.9rem;margin-top:10px">Кожна гривня йде на прасад і розвиток храму.</p></div>
+    </div>
+    <div class="copyright">© 2026 ІСККОН Чернівці · Харе Крішна</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});
+</script>
+</body>
+</html>
