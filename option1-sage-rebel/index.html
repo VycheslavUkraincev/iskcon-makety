@@ -3,273 +3,414 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Харе Крішна Чернівці — Твоя територія внутрішньої свободи</title>
-<meta name="description" content="День відкритих дверей у Ведичному центрі. Щонеділі о 13:30, вул. Скальда 40А, Чернівці. Вхід вільний.">
+<title>Харе Крішна Чернівці — Доторкнися до вічності</title>
+<meta name="description" content="День відкритих дверей у Ведичному центрі. Щонеділі о 13:30, вул. Скальда 40А. Відчуйте магію звуку, смак чистої їжі та гармонію серця.">
 <style>
 :root{
-  --olive:#6B7F3E; --olive-dark:#4A5A2A;
-  --greige:#B8A88A; --greige-light:#D6CBB5;
-  --navy:#1E3A5F; --navy-dark:#142A45;
-  --paper:#F5F0E8; --paper-dark:#EDE6D6;
-  --ink:#2A2620; --muted:#6B6558;
+  --purple:#2D1B4E; --purple-deep:#1A0F33; --purple-light:#4A2E7A;
+  --gold:#D4AF37; --gold-light:#F0D98C; --gold-dark:#A8861F;
+  --emerald:#0F6B5C; --emerald-light:#1A9B84;
+  --cream:#FDF8F0; --ink:#2A2138; --muted:#7A6E8A;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.7}
-h1,h2,h3{font-weight:700;line-height:1.25}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-section{padding:70px 0}
-
-/* Header */
-header{background:var(--navy-dark);color:#fff;padding:14px 0;position:sticky;top:0;z-index:100}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:var(--purple-deep);color:var(--cream);line-height:1.8}
+h1,h2,h3{font-weight:600;line-height:1.3}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+section{padding:80px 0;position:relative}
+header{background:rgba(26,15,51,.85);backdrop-filter:blur(10px);padding:16px 0;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(212,175,55,.2)}
 header .container{display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:1.15rem;letter-spacing:.12em;font-weight:700}
-nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:.95rem;opacity:.9}
-nav a:hover{opacity:1;text-decoration:underline}
-
-/* Hero */
-.hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,var(--olive-dark) 100%);color:#fff;padding:100px 0 80px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:var(--paper);clip-path:polygon(0 100%,100% 100%,100% 20%,0 100%)}
-.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:20px;max-width:800px}
-.hero h1 .accent{color:var(--greige-light)}
-.hero p.lead{font-size:1.25rem;max-width:640px;margin-bottom:30px;opacity:.92}
-.hero-meta{display:flex;gap:30px;flex-wrap:wrap;margin-bottom:35px;font-size:1.05rem}
-.hero-meta span{display:flex;align-items:center;gap:8px}
-.btn{display:inline-block;padding:14px 32px;border-radius:4px;text-decoration:none;font-family:inherit;font-size:1.05rem;font-weight:700;cursor:pointer;border:2px solid transparent;transition:.2s}
-.btn-primary{background:var(--olive);color:#fff}
-.btn-primary:hover{background:var(--olive-dark)}
-.btn-outline{border-color:#fff;color:#fff;background:transparent;margin-left:12px}
-.btn-outline:hover{background:rgba(255,255,255,.12)}
-
-/* Section titles */
-.sec-title{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:12px;color:var(--navy-dark)}
-.sec-sub{font-size:1.1rem;color:var(--muted);max-width:680px;margin-bottom:40px}
-
-/* Cards */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.card{background:#fff;border:1px solid var(--greige-light);border-radius:8px;padding:30px;transition:.2s}
-.card:hover{box-shadow:0 8px 24px rgba(30,58,95,.1);transform:translateY(-2px)}
-.card h3{font-size:1.25rem;margin-bottom:10px;color:var(--navy-dark)}
-.card p{color:var(--muted);font-size:1rem}
-.card .icon{font-size:2.2rem;margin-bottom:14px;display:block}
-
-/* Myth-busting */
-.myths{background:var(--navy-dark);color:#fff}
-.myths .sec-title{color:#fff}
-.myths .sec-sub{color:var(--greige-light)}
-.myth{background:rgba(255,255,255,.06);border-left:4px solid var(--olive);border-radius:0 8px 8px 0;padding:24px 28px;margin-bottom:18px}
-.myth .q{font-size:1.15rem;font-weight:700;margin-bottom:8px;color:var(--greige-light)}
-.myth .a{opacity:.88}
-
-/* Stats */
-.stats{background:var(--paper-dark)}
-.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
-.stat-num{font-size:2.6rem;font-weight:700;color:var(--olive-dark)}
-.stat-label{color:var(--muted);font-size:.95rem;margin-top:6px}
-
-/* Schedule */
-.schedule{background:#fff;border:1px solid var(--greige-light);border-radius:8px;overflow:hidden}
-.sched-row{display:flex;border-bottom:1px solid var(--paper-dark);padding:18px 28px;align-items:center}
-.sched-row:last-child{border:none}
-.sched-time{font-weight:700;color:var(--olive-dark);min-width:140px;font-size:1.05rem}
-.sched-what{flex:1}
-.sched-what strong{display:block;font-size:1.08rem}
-.sched-what span{color:var(--muted);font-size:.95rem}
-
-/* Food for Life */
-.ffl{background:linear-gradient(135deg,#FDF8EE,#F5EDD8);border-top:3px solid var(--olive)}
-.ffl .sec-title{color:var(--olive-dark)}
-
-/* FAQ */
-.faq-item{background:#fff;border:1px solid var(--greige-light);border-radius:8px;margin-bottom:12px;overflow:hidden}
-.faq-q{padding:18px 24px;font-weight:700;cursor:pointer;font-size:1.08rem;display:flex;justify-content:space-between;align-items:center}
-.faq-q:hover{background:var(--paper)}
-.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .3s;color:var(--muted)}
-.faq-item.open .faq-a{max-height:300px;padding:0 24px 20px}
-
-/* CTA */
-.cta{background:var(--olive-dark);color:#fff;text-align:center;padding:80px 0}
-.cta h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px}
-.cta p{font-size:1.15rem;opacity:.9;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
-
-/* Footer */
-footer{background:var(--navy-dark);color:#fff;padding:50px 0 30px}
-footer .grid3{margin-bottom:30px}
-footer h4{margin-bottom:14px;font-size:1.05rem;color:var(--greige-light)}
-footer a{color:#fff;opacity:.8;text-decoration:none;display:block;margin-bottom:8px;font-size:.95rem}
-footer a:hover{opacity:1}
-.copyright{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);opacity:.6;font-size:.9rem}
-
-/* Marquee */
-.marquee{background:var(--navy);color:var(--greige-light);padding:14px 0;overflow:hidden;white-space:nowrap;font-size:1.1rem;letter-spacing:.05em}
-.marquee span{display:inline-block;animation:scroll 30s linear infinite;padding-right:50px}
+.logo{font-size:1.1rem;letter-spacing:.15em;color:var(--gold-light);font-weight:600}
+nav a{color:var(--cream);text-decoration:none;margin-left:20px;font-size:.95rem;opacity:.85;transition:.2s}
+nav a:hover{opacity:1;color:var(--gold-light)}
+.hero{min-height:92vh;display:flex;align-items:center;background:linear-gradient(rgba(26,15,51,.75),rgba(26,15,51,.85)),url('../assets/altar.jpg') center/cover;position:relative;overflow:hidden}
+.hero::before{content:"✦";position:absolute;font-size:20rem;opacity:.06;top:-40px;right:5%;color:var(--gold);animation:float 8s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-20px) rotate(5deg)}}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;margin:0 auto}
+.hero-eyebrow{color:var(--gold);letter-spacing:.25em;font-size:.9rem;margin-bottom:20px;text-transform:uppercase}
+.hero h1{font-size:clamp(2.6rem,6vw,4.5rem);margin-bottom:24px;background:linear-gradient(135deg,var(--gold-light),#fff,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p.lead{font-size:1.3rem;max-width:620px;margin:0 auto 32px;opacity:.92;font-style:italic}
+.hero-meta{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;font-size:1.05rem;color:var(--gold-light)}
+.btn{display:inline-block;padding:16px 40px;border-radius:50px;text-decoration:none;font-family:inherit;font-size:1.08rem;font-weight:600;cursor:pointer;transition:.3s;border:none}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--purple-deep);box-shadow:0 8px 30px rgba(212,175,55,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(212,175,55,.5)}
+.btn-ghost{border:1px solid rgba(212,175,55,.5);color:var(--gold-light);background:transparent;margin-left:14px}
+.btn-ghost:hover{background:rgba(212,175,55,.12)}
+.sec-title{font-size:clamp(2rem,4vw,2.8rem);text-align:center;margin-bottom:14px;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-sub{text-align:center;color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 auto 50px;font-style:italic}
+.light{background:var(--cream);color:var(--ink)}
+.light .sec-title{background:linear-gradient(135deg,var(--purple),var(--emerald));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.light .sec-sub{color:#8A7E96}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.18);border-radius:20px;padding:36px;transition:.3s;backdrop-filter:blur(5px)}
+.card:hover{border-color:rgba(212,175,55,.45);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.light .card{background:#fff;border-color:#E8E0D0;box-shadow:0 4px 20px rgba(45,27,78,.06)}
+.light .card:hover{box-shadow:0 12px 36px rgba(45,27,78,.12)}
+.card h3{font-size:1.35rem;margin-bottom:12px;color:var(--gold-light)}
+.light .card h3{color:var(--purple)}
+.card p{opacity:.85;font-size:1.02rem}
+.light .card p{color:#5A4E6A}
+.card .icon{font-size:2.4rem;margin-bottom:16px;display:block;filter:drop-shadow(0 4px 12px rgba(212,175,55,.4))}
+.card img{border-radius:14px;margin-bottom:20px;width:100%;height:200px;object-fit:cover}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split img{border-radius:20px;width:100%;height:420px;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.light .split img{box-shadow:0 16px 40px rgba(45,27,78,.15)}
+.ritual{background:linear-gradient(180deg,var(--purple-deep),var(--purple))}
+.timeline{max-width:700px;margin:0 auto;position:relative}
+.timeline::before{content:"";position:absolute;left:30px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),transparent)}
+.step{position:relative;padding:0 0 36px 80px}
+.step:last-child{padding-bottom:0}
+.step-dot{position:absolute;left:18px;top:4px;width:26px;height:26px;border-radius:50%;background:var(--gold);box-shadow:0 0 20px rgba(212,175,55,.6)}
+.step-time{color:var(--gold);font-size:.95rem;letter-spacing:.1em;margin-bottom:6px}
+.step h3{font-size:1.3rem;margin-bottom:8px}
+.step p{opacity:.75;font-size:1rem}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.stat{background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.2);border-radius:16px;padding:32px 20px}
+.stat-num{font-size:2.8rem;font-weight:700;color:var(--gold-light);text-shadow:0 0 30px rgba(212,175,55,.5)}
+.stat-label{opacity:.7;margin-top:8px;font-size:.95rem}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery img{border-radius:16px;height:260px;object-fit:cover;width:100%;transition:.3s;border:1px solid rgba(212,175,55,.15)}
+.gallery img:hover{transform:scale(1.03);border-color:rgba(212,175,55,.4)}
+.testi{background:rgba(255,255,255,.03);border-left:3px solid var(--gold);border-radius:0 16px 16px 0;padding:28px 32px;margin-bottom:20px;font-style:italic}
+.testi .who{font-style:normal;color:var(--gold-light);margin-top:12px;font-size:.95rem}
+.testi .stars{color:var(--gold);font-style:normal;margin-bottom:8px}
+.ffl{background:linear-gradient(135deg,#1A4A3E,#0F6B5C);position:relative;overflow:hidden}
+.ffl::before{content:"🍲";position:absolute;font-size:16rem;opacity:.06;right:5%;top:10%}
+.faq-item{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.15);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.light .faq-item{background:#fff;border-color:#E8E0D0}
+.faq-q{padding:20px 26px;font-weight:600;cursor:pointer;font-size:1.1rem;display:flex;justify-content:space-between;align-items:center;color:var(--gold-light)}
+.light .faq-q{color:var(--purple)}
+.faq-q:hover{background:rgba(212,175,55,.06)}
+.faq-a{padding:0 26px;max-height:0;overflow:hidden;transition:max-height .35s;opacity:.8}
+.light .faq-a{color:#5A4E6A}
+.faq-item.open .faq-a{max-height:300px;padding:0 26px 22px}
+.cta{background:radial-gradient(ellipse at center,var(--purple-light),var(--purple-deep));text-align:center;padding:100px 0}
+.cta h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:18px;color:var(--gold-light)}
+.cta p{font-size:1.2rem;opacity:.85;margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto;font-style:italic}
+footer{background:#120A24;padding:60px 0 30px;border-top:1px solid rgba(212,175,55,.15)}
+footer .grid3{margin-bottom:36px}
+footer h4{color:var(--gold);margin-bottom:16px;font-size:1.05rem;letter-spacing:.08em}
+footer a{color:var(--cream);opacity:.7;text-decoration:none;display:block;margin-bottom:10px;font-size:.95rem}
+footer a:hover{opacity:1;color:var(--gold-light)}
+.copyright{text-align:center;padding-top:24px;border-top:1px solid rgba(212,175,55,.1);opacity:.5;font-size:.9rem}
+.marquee{background:linear-gradient(90deg,var(--gold-dark),var(--gold),var(--gold-dark));color:var(--purple-deep);padding:12px 0;overflow:hidden;white-space:nowrap;font-size:1.05rem;letter-spacing:.08em;font-weight:600}
+.marquee span{display:inline-block;animation:scroll 32s linear infinite;padding-right:60px}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
+.map-wrap{border-radius:20px;overflow:hidden;border:1px solid rgba(212,175,55,.2)}
+.map-wrap iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(.3)}
+.persona{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.18);border-radius:16px;padding:30px;text-align:center}
+.persona h3{color:var(--gold-light);margin-bottom:4px}
+.persona .role{color:var(--gold);font-size:.9rem;letter-spacing:.08em;margin-bottom:14px}
+.persona p{opacity:.75;font-size:.98rem;font-style:italic}
 @media(max-width:768px){
-  .grid3,.grid2,.stat-grid{grid-template-columns:1fr}
+  .grid3,.grid2,.stats-grid,.split,.gallery{grid-template-columns:1fr}
   nav{display:none}
-  .sched-row{flex-direction:column;align-items:flex-start;gap:6px}
-  .sched-time{min-width:auto}
-  section{padding:50px 0}
+  .step{padding-left:60px}
+  .timeline::before{left:20px}
+  .step-dot{left:8px}
+  section{padding:56px 0}
+  .split img{height:300px}
 }
+
+/* === Просунутий дизайн: Мудрець+Маг === */
+html{scroll-behavior:smooth}
+::selection{background:var(--gold);color:var(--purple-deep)}
+/* Зоряне небо */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
+  background-image:radial-gradient(1px 1px at 10% 20%,#fff 100%,transparent 100%),
+  radial-gradient(1px 1px at 30% 60%,var(--gold-light) 100%,transparent 100%),
+  radial-gradient(1.5px 1.5px at 70% 30%,#fff 100%,transparent 100%),
+  radial-gradient(1px 1px at 85% 75%,var(--gold-light) 100%,transparent 100%),
+  radial-gradient(1px 1px at 50% 90%,#fff 100%,transparent 100%),
+  radial-gradient(2px 2px at 20% 80%,var(--gold) 100%,transparent 100%);
+  animation:twinkle 4s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.3}to{opacity:.6}}
+section{position:relative;z-index:2}
+/* Scroll reveal з магією */
+.reveal{opacity:0;transform:translateY(40px) scale(.98);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+/* Hero з паралаксом і сяйвом */
+.hero{background-attachment:fixed}
+.hero h1{animation:glowIn 1.4s ease both}
+@keyframes glowIn{from{opacity:0;transform:translateY(30px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+.hero p.lead{animation:fadeUp 1.2s ease .3s both}
+.hero-meta{animation:fadeUp 1.2s ease .5s both}
+.hero .btn{animation:fadeUp 1.2s ease .7s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+/* Сяйво заголовків */
+.sec-title{filter:drop-shadow(0 0 20px rgba(212,175,55,.3))}
+/* Картки зі склом */
+.card{position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  background:linear-gradient(45deg,transparent 40%,rgba(212,175,55,.08) 50%,transparent 60%);
+  transform:rotate(45deg) translateX(-100%);transition:transform .8s ease}
+.card:hover::before{transform:rotate(45deg) translateX(100%)}
+.card img{transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s}
+.card:hover img{transform:scale(1.06);filter:brightness(1.08)}
+/* Кнопки з пульсацією */
+.btn-gold{position:relative;overflow:hidden}
+.btn-gold::after{content:"";position:absolute;inset:0;border-radius:50px;
+  box-shadow:0 0 0 0 rgba(212,175,55,.5);animation:pulse 2.5s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 16px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
+/* Timeline з анімацією */
+.step{opacity:0;transform:translateX(-30px);transition:all .7s ease}
+.step.visible{opacity:1;transform:none}
+.step-dot{animation:dotGlow 2s ease-in-out infinite}
+@keyframes dotGlow{0%,100%{box-shadow:0 0 12px rgba(212,175,55,.6)}50%{box-shadow:0 0 28px rgba(212,175,55,1)}}
+/* Галерея з магією */
+.gallery img{transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s}
+.gallery img:hover{transform:scale(1.04) rotate(.5deg);box-shadow:0 12px 40px rgba(212,175,55,.25);z-index:3}
+/* Marquee з блиском */
+.marquee{background-size:200% auto;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:200% center}}
+/* Плаваючі частинки */
+.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.particle{position:absolute;width:4px;height:4px;background:var(--gold-light);border-radius:50%;opacity:.6;animation:rise linear infinite}
+@keyframes rise{from{transform:translateY(100vh);opacity:0}10%{opacity:.7}90%{opacity:.5}to{transform:translateY(-10vh);opacity:0}}
+section{scroll-margin-top:80px}
 </style>
 </head>
 <body>
 
 <header>
   <div class="container">
-    <div class="logo">ХАРЕ КРІШНА · ЧЕРНІВЦІ</div>
+    <div class="logo">✦ ХАРЕ КРІШНА · ЧЕРНІВЦІ</div>
     <nav>
       <a href="#about">Про нас</a>
       <a href="#program">Програма</a>
-      <a href="#courses">Курси</a>
+      <a href="#philosophy">Філософія</a>
       <a href="#ffl">Їжа Життя</a>
-      <a href="#faq">Питання</a>
       <a href="#contacts">Контакти</a>
     </nav>
   </div>
 </header>
 
-<div class="marquee"><span>Харе Крішна Харе Крішна Крішна Крішна Харе Харе · Харе Рама Харе Рама Рама Рама Харе Харе · Харе Крішна Харе Крішна Крішна Крішна Харе Харе · Харе Рама Харе Рама Рама Рама Харе Харе ·&nbsp;</span></div>
+<div class="marquee"><span>✦ Харе Крішна Харе Крішна Крішна Крішна Харе Харе ✦ Харе Рама Харе Рама Рама Рама Харе Харе ✦&nbsp;</span></div>
 
 <section class="hero">
   <div class="container">
-    <h1>Світ каже тобі поспішати.<br><span class="accent">Веди кажуть — зупинись.</span></h1>
-    <p class="lead">Якщо ви хоч раз чули «Харе Крішна» і запитували себе «що це означає?» — приходьте. Без фанатизму, без тиску. Просто подивіться самі.</p>
-    <div class="hero-meta">
-      <span>📅 Щонеділі, початок 13:30</span>
-      <span>📍 вул. Скальда, 40А</span>
-      <span>🎟️ Вхід вільний</span>
+    <div class="hero-content">
+      <div class="hero-eyebrow">День відкритих дверей · Ведичний центр</div>
+      <h1>Доторкнися до вічності<br>в кожній миті</h1>
+      <p class="lead">Відчуйте магію священного звуку, смак чистої їжі та тепло, що наповнює серце. Ваш простір трансформації — у нашому місті.</p>
+      <div class="hero-meta">
+        <span>✦ Щонеділі о 13:30</span>
+        <span>✦ вул. Скальда, 40А</span>
+        <span>✦ Вхід вільний</span>
+      </div>
+      <a href="#program" class="btn btn-gold">Почати трансформацію</a>
+      <a href="#about" class="btn btn-ghost">Відкрити для себе</a>
     </div>
-    <a href="#program" class="btn btn-primary">Дізнатися більше</a>
-    <a href="#contacts" class="btn btn-outline">Приєднатися до руху</a>
   </div>
 </section>
 
-<section id="awaits">
+<section class="light" id="awaits">
   <div class="container">
     <h2 class="sec-title">На вас чекають</h2>
-    <p class="sec-sub">Чотири прості речі. Нічого містичного — приходьте і перевірте.</p>
+    <p class="sec-sub">Чотири двері до нового досвіду — оберіть свою</p>
     <div class="grid3">
-      <div class="card"><span class="icon">🎵</span><h3>Мантроспіви</h3><p>Колективне співання мантри Харе Крішна. Не треба вміти — просто слухайте.</p></div>
-      <div class="card"><span class="icon">📖</span><h3>Лекція</h3><p>Філософія Вед простою мовою: хто я, навіщо живу, що далі. Питання вітаються.</p></div>
-      <div class="card"><span class="icon">🍲</span><h3>Вегетаріанський обід</h3><p>Щедрий гарячий прасад — їжа, приготована з любов'ю. Безкоштовно для всіх.</p></div>
-    </div>
-    <div class="grid2" style="margin-top:24px">
-      <div class="card"><span class="icon">💬</span><h3>Спілкування</h3><p>Неформальні розмови, відповіді на питання. Ніхто не буде вас «обробляти».</p></div>
-      <div class="card"><span class="icon">🧘</span><h3>Тиша і спокій</h3><p>Місце, де можна просто побути собою. Без шуму, без поспіху, без масок.</p></div>
+      <div class="card"><img src="../assets/kirtan.jpg" alt="Кіртан"><h3>🎵 Мантроспіви</h3><p>Дозвольте вібраціям священного звуку наповнити простір гармонією. Слухайте — і відчуйте, як затихає внутрішній шум.</p></div>
+      <div class="card"><img src="../assets/community.jpg" alt="Лекція"><h3>📖 Мудрість Вед</h3><p>Давні істини, що змінюють сприйняття світу. Лекція, після якої ви подивитеся на життя інакше.</p></div>
+      <div class="card"><img src="../assets/prasad.jpg" alt="Прасад"><h3>🍲 Смак благості</h3><p>Щедрий вегетаріанський бенкет — їжа, приготована з любов'ю. Смак, який зігріває зсередини.</p></div>
     </div>
   </div>
 </section>
 
-<section class="myths" id="myths">
+<section id="forwhom">
   <div class="container">
-    <h2 class="sec-title">Називаємо речі своїми іменами</h2>
-    <p class="sec-sub">Чесні відповіді на незручні питання. Бо ми поважаємо ваш розум.</p>
-    <div class="myth"><div class="q">«Це секта?»</div><div class="a">Ні. ІСККОН — офіційно зареєстрована релігійна організація, що діє в Україні з 1990-х років. Ми не ізолюємо людей, не забираємо майно, не забороняємо спілкування з родиною. Приходьте, подивіться, запитайте — і вирішуйте самі.</div></div>
-    <div class="myth"><div class="q">«Мене змусять щось купувати?»</div><div class="a">Ні. Вхід вільний, обід безкоштовний. Книги можна купити за бажанням — ніхто не ходить за вами з каталогом.</div></div>
-    <div class="myth"><div class="q">«Треба різко змінити життя?»</div><div class="a">Ні. Ми пропонуємо альтернативу, а не ультиматум. Спробуйте мантру, послухайте лекцію, поїжте прасад — далі вирішуйте самі, у своєму темпі.</div></div>
-    <div class="myth"><div class="q">«Я нічого не знаю про Веди — мені буде ніяково?»</div><div class="a">Більшість гостей приходять саме такими. Пояснюємо просто, терміни розшифровуємо. Ніякових питань не буває.</div></div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <h2 class="sec-title">Про нас — коротко і по суті</h2>
-    <p class="sec-sub">ІСККОН — Міжнародне товариство свідомості Крішни. Рух бгакті-йоги, заснований 1966 року А.Ч. Бгактіведантою Свамі Прабгупадою.</p>
-    <div class="stat-grid">
-      <div><div class="stat-num">2000+</div><div class="stat-label">храмів і центрів у світі</div></div>
-      <div><div class="stat-num">516M</div><div class="stat-label">поширених духовних книг</div></div>
-      <div><div class="stat-num">3 млрд</div><div class="stat-label">порцій прасаду роздано</div></div>
-    </div>
-    <div class="grid2" style="margin-top:40px">
-      <div class="card"><h3>7 цілей ІСККОН</h3><p>Поширювати духовні знання · Проповідувати філософію свідомості Крішни · Зміцнювати єдність · Поширювати санкіртану · Будувати духовні громади · Жити просто і природно · Видавати духовну літературу</p></div>
-      <div class="card"><h3>Чому Чернівці?</h3><p>Бо шлях до усвідомленості починається там, де ви є. Наша громада — ваші сусіди, які обрали жити свідомо. Приходьте знайомитися.</p></div>
+    <h2 class="sec-title">Для кого цей простір</h2>
+    <p class="sec-sub">Кожен приходить зі своїм запитом — і знаходить своє</p>
+    <div class="grid3">
+      <div class="persona"><h3>Артем</h3><div class="role">✦ ШУКАЧ ІСТИНИ</div><p>25 років. Шукає відповіді на глибокі питання. Знайде тут філософію без фанатизму і спільноту однодумців.</p></div>
+      <div class="persona"><h3>Олена</h3><div class="role">✦ ЕКО-СВІДОМА ГОСПОДИНЯ</div><p>43 роки. Цінує красу, гармонію, здоров'я. Знайде рецепти, затишок і натхнення для дому.</p></div>
+      <div class="persona"><h3>Ігор</h3><div class="role">✦ ВІДДАНИЙ</div><p>45 років. Практикує понад 10 років. Знайде точний розклад, календар і живе спілкування.</p></div>
     </div>
   </div>
 </section>
 
-<section id="program" style="background:var(--paper-dark)">
+<section class="light" id="about">
   <div class="container">
-    <h2 class="sec-title">Недільна програма</h2>
-    <p class="sec-sub">Щонеділі. Приходьте на будь-яку частину — або на все.</p>
-    <div class="schedule">
-      <div class="sched-row"><div class="sched-time">13:30 – 14:00</div><div class="sched-what"><strong>Мантроспіви</strong><span>Відкривальні молитви, налаштування на спокій</span></div></div>
-      <div class="sched-row"><div class="sched-time">14:00 – 15:00</div><div class="sched-what"><strong>Лекція з філософії</strong><span>Бгаґавад-Ґіта та Веди простою мовою</span></div></div>
-      <div class="sched-row"><div class="sched-time">15:00 – 16:00</div><div class="sched-what"><strong>Кіртан</strong><span>Колективне співання — серце програми</span></div></div>
-      <div class="sched-row"><div class="sched-time">16:00 – 17:30</div><div class="sched-what"><strong>Бенкет</strong><span>Гарячі вегетаріанські страви для всіх</span></div></div>
-      <div class="sched-row"><div class="sched-time">17:30 – 18:30</div><div class="sched-what"><strong>Спілкування</strong><span>Питання, розмови, нові знайомства</span></div></div>
+    <div class="split">
+      <img src="../assets/altar.jpg" alt="Вівтар Панча-таттви">
+      <div>
+        <h2 class="sec-title" style="text-align:left">Про нас</h2>
+        <p style="margin-bottom:16px;font-size:1.1rem">ІСККОН — Міжнародне товариство свідомості Крішни. Шлях бгакті-йоги — йоги любові та відданості.</p>
+        <p style="margin-bottom:16px;color:#5A4E6A">Заснований 1966 року Шрілою Прабгупадою, який у 70 років перетнув океан, щоб поділитися мудрістю Вед зі світом. Сьогодні — понад 10 мільйонів сердець по всьому світу.</p>
+        <p style="color:#5A4E6A;font-style:italic">Наша чернівецька громада — це тепло, яке ви відчуєте з першого кроку.</p>
+      </div>
+    </div>
+    <div class="stats-grid" style="margin-top:50px">
+      <div class="stat" style="background:#fff;border-color:#E8E0D0"><div class="stat-num" style="color:var(--purple);text-shadow:none">2000+</div><div class="stat-label" style="color:#5A4E6A">храмів і центрів</div></div>
+      <div class="stat" style="background:#fff;border-color:#E8E0D0"><div class="stat-num" style="color:var(--purple);text-shadow:none">516M</div><div class="stat-label" style="color:#5A4E6A">поширених книг</div></div>
+      <div class="stat" style="background:#fff;border-color:#E8E0D0"><div class="stat-num" style="color:var(--purple);text-shadow:none">3 млрд</div><div class="stat-label" style="color:#5A4E6A">порцій прасаду</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="philosophy" style="padding-top:0">
+  <div class="container">
+    <h2 class="sec-title">Філософія та практика</h2>
+    <p class="sec-sub">Глибина, що огортає теплом</p>
+    <div class="grid3">
+      <div class="card"><h3>📿 Мантра-йога</h3><p><strong>Харе Крішна Харе Крішна<br>Крішна Крішна Харе Харе<br>Харе Рама Харе Рама<br>Рама Рама Харе Харе</strong></p><p style="margin-top:12px">Дозвольте звукам давніх мантр відкрити простір для внутрішнього світла.</p></div>
+      <div class="card"><h3>📖 Ведична мудрість</h3><p>Бгаґавад-Ґіта, Шрімад-Бгаґаватам — джерела, що надихають мільйони. Відкрийте для себе глибину, що змінює сприйняття.</p></div>
+      <div class="card"><h3>🥗 Чисте харчування</h3><p>Прасад — їжа, наповнена любов'ю. Смак, що очищує і тіло, і свідомість. Відчуйте різницю.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ritual" id="program">
+  <div class="container">
+    <h2 class="sec-title">Недільний ритуал</h2>
+    <p class="sec-sub">П'ять кроків від суєти — до внутрішньої тиші</p>
+    <div class="grid2" style="margin-bottom:40px">
+      <img src="../assets/kirtan.jpg" alt="Кіртан" style="border-radius:20px;height:320px;object-fit:cover;width:100%">
+      <img src="../assets/prasad.jpg" alt="Прасад" style="border-radius:20px;height:320px;object-fit:cover;width:100%">
+    </div>
+    <div class="timeline">
+      <div class="step"><div class="step-dot"></div><div class="step-time">13:30 – 14:00</div><h3>Мантри</h3><p>Відкривальні молитви. Перші звуки, що очищують простір.</p></div>
+      <div class="step"><div class="step-dot"></div><div class="step-time">14:00 – 15:00</div><h3>Лекція</h3><p>Філософія Вед — глибина, що змінює погляд на життя.</p></div>
+      <div class="step"><div class="step-dot"></div><div class="step-time">15:00 – 16:00</div><h3>Кіртан</h3><p>Колективне співання — серце програми. Відчуйте єдність голосів.</p></div>
+      <div class="step"><div class="step-dot"></div><div class="step-time">16:00 – 17:30</div><h3>Бенкет</h3><p>Прасад — священна їжа. Смак, що наповнює і тіло, і душу.</p></div>
+      <div class="step"><div class="step-dot"></div><div class="step-time">17:30 – 18:30</div><h3>Спілкування</h3><p>Теплі розмови, нові друзі, відповіді на ваші питання.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:44px"><a href="#contacts" class="btn btn-gold">Відкрити для себе глибину</a></div>
+  </div>
+</section>
+
+<section id="saturday" style="background:var(--purple)">
+  <div class="container" style="max-width:800px;text-align:center">
+    <h2 class="sec-title">🌅 Суботній ранок</h2>
+    <p class="sec-sub">Для тих, хто прокидається зі сонцем</p>
+    <div class="grid2" style="text-align:left;margin-top:30px">
+      <div class="card"><h3>08:00 — Мангала-араті</h3><p>Ранкове поклоніння Божествам. Магія світанку в храмі.</p></div>
+      <div class="card"><h3>10:00 — Клас Бгаґаватам</h3><p>Ранкове вивчення писань з чаєм.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2 class="sec-title">Миті, що світяться</h2>
+    <p class="sec-sub">Атмосфера нашої громади</p>
+    <div class="gallery">
+      <img src="../assets/altar.jpg" alt="Вівтар">
+      <img src="../assets/kirtan.jpg" alt="Кіртан">
+      <img src="../assets/joy.jpg" alt="Радість">
+      <img src="../assets/prasad.jpg" alt="Прасад">
+      <img src="../assets/community.jpg" alt="Громада">
+      <img src="../assets/ffl.jpg" alt="Їжа Життя">
     </div>
   </div>
 </section>
 
 <section class="ffl" id="ffl">
   <div class="container">
-    <h2 class="sec-title">🍲 «Їжа Життя»</h2>
-    <p class="sec-sub">Ми просто годуємо людей. Теплою їжею, безкоштовно, щосуботи.</p>
-    <div class="grid2">
-      <div class="card"><h3>5 млн+ обідів</h3><p>роздано в Україні. Готуємо з 08:00 у храмі, роздаємо о 14:00 на Соборній площі.</p></div>
-      <div class="card"><h3>Станьте волонтером</h3><p>Потрібні руки: чистити овочі, готувати, роздавати. Приходьте в суботу зранку — або напишіть нам.</p><br><a href="#contacts" class="btn btn-primary">Долучитися</a></div>
+    <div class="split">
+      <div>
+        <h2 class="sec-title" style="text-align:left">🍲 «Їжа Життя»</h2>
+        <p style="margin-bottom:16px;font-size:1.1rem">Турбота, що зігріває. Ми годуємо тих, хто цього потребує — з любов'ю.</p>
+        <p style="margin-bottom:20px"><strong style="color:var(--gold-light)">5 млн+ обідів</strong> роздано в Україні. Щосуботи: готуємо з 08:00, роздаємо о 14:00 на Соборній площі.</p>
+        <a href="#contacts" class="btn btn-gold">Стати волонтером</a>
+      </div>
+      <img src="../assets/ffl.jpg" alt="Волонтери Їжі Життя">
     </div>
   </div>
 </section>
 
-<section id="courses" style="background:#fff">
+<section class="light" id="courses">
   <div class="container">
-    <h2 class="sec-title">Курси і навчання</h2>
-    <p class="sec-sub">Хочете глибше? Обирайте напрям.</p>
+    <h2 class="sec-title">Шлях навчання</h2>
+    <p class="sec-sub">Три двері до глибшого розуміння</p>
     <div class="grid3">
-      <div class="card"><span class="icon">🍳</span><h3>Ведична кулінарія</h3><p>Готуйте смачно без м'яса. Прасад, аюрведичні принципи, майстер-класи.</p></div>
-      <div class="card"><span class="icon">🥁</span><h3>Кіртан і музика</h3><p>Мриданга, каратали, фісгармонія. Навчіться грати і співати мантри.</p></div>
-      <div class="card"><span class="icon">📚</span><h3>Школа бгакті</h3><p>«Хто я?», Бгаґавад-Ґіта, філософія. Системне вивчення Вед.</p></div>
+      <div class="card"><span class="icon">🍳</span><h3>Ведична кулінарія</h3><p>Мистецтво прасаду — їжі, що наповнює світлом. Майстер-класи, аюрведа, смак благості.</p></div>
+      <div class="card"><span class="icon">🥁</span><h3>Музика мантр</h3><p>Мриданга, каратали, фісгармонія. Навчіться творити священний звук власними руками.</p></div>
+      <div class="card"><span class="icon">📚</span><h3>Школа бгакті</h3><p>«Хто я?» — подорож у глибину себе через мудрість Бгаґавад-Ґіти.</p></div>
     </div>
   </div>
 </section>
 
-<section id="donation" style="background:var(--paper-dark)">
+<section id="stories">
   <div class="container">
-    <h2 class="sec-title">Підтримати храм</h2>
-    <p class="sec-sub">Кожна гривня йде на прасад, розвиток храму і «Їжу Життя».</p>
+    <h2 class="sec-title">Історії трансформації</h2>
+    <p class="sec-sub">Голоси тих, хто вже відчув</p>
+    <div class="testi"><div class="stars">★★★★★</div>«Я прийшла просто з цікавості. А залишилася, бо вперше за роки відчула справжній спокій. Тепер неділя — мій улюблений день.»<div class="who">— Олена, гостя програм</div></div>
+    <div class="testi"><div class="stars">★★★★★</div>«Думав, буде нудна лекція про релігію. А почув відповіді на питання, які мучили мене роками.»<div class="who">— Артем, гість програм</div></div>
+    <div class="testi"><div class="stars">★★★★★</div>«Прасад — це щось неймовірне. Їжа, після якої відчуваєш не важкість, а легкість і вдячність.»<div class="who">— Марія, волонтер «Їжі Життя»</div></div>
+  </div>
+</section>
+
+<section id="donation" style="background:linear-gradient(180deg,var(--purple),var(--purple-deep))">
+  <div class="container">
+    <h2 class="sec-title">Підтримати світлом</h2>
+    <p class="sec-sub">Ваша щедрість стає теплом для тих, хто його потребує</p>
     <div class="grid2">
-      <div class="card"><h3>💳 Онлайн</h3><p><a href="https://secure.wayforpay.com/donate/d645a94f6a237" style="color:var(--olive-dark)">Разова пожертва</a><br><a href="https://secure.wayforpay.com/donate/db52afa6592ea" style="color:var(--olive-dark)">Регулярна пожертва</a></p></div>
-      <div class="card"><h3>🏦 Реквізити</h3><p style="font-size:.92rem">РО «Релігійна громада свідомості Крішни в м. Чернівці»<br>ЄДРПОУ: 46285356<br>IBAN: UA563077700000026007111264936<br>Призначення: Добровільна пожертва</p></div>
+      <div class="card"><h3>✦ Онлайн</h3><p><a href="https://secure.wayforpay.com/donate/d645a94f6a237" style="color:var(--gold-light)">Разова пожертва</a><br><a href="https://secure.wayforpay.com/donate/db52afa6592ea" style="color:var(--gold-light)">Регулярна підтримка</a></p></div>
+      <div class="card"><h3>✦ Реквізити</h3><p style="font-size:.92rem">РО «Релігійна громада свідомості Крішни в м. Чернівці»<br>ЄДРПОУ: 46285356<br>IBAN: UA563077700000026007111264936</p></div>
     </div>
   </div>
 </section>
 
-<section id="faq">
+<section class="light" id="faq" style="padding:60px 0">
+  <div class="container" style="max-width:800px">
+    <h2 class="sec-title">Питання, що зігрівають</h2>
+    <p class="sec-sub">Все, що ви хотіли запитати</p>
+    <div style="margin-top:30px">
+      <div class="faq-item"><div class="faq-q">Я нічого не знаю про Веди — можна? <span>+</span></div><div class="faq-a">Звісно! Більшість гостей приходять саме такими. Ми все пояснюємо просто.</div></div>
+      <div class="faq-item"><div class="faq-q">Що вдягнути? <span>+</span></div><div class="faq-a">Що завгодно зручне. Головне — ваше відкрите серце.</div></div>
+      <div class="faq-item"><div class="faq-q">Чи можна з дітьми? <span>+</span></div><div class="faq-a">Так! Діти відчувають атмосферу радості найкраще.</div></div>
+      <div class="faq-item"><div class="faq-q">Це безкоштовно? <span>+</span></div><div class="faq-a">Так. Вхід вільний, частування — від серця. Пожертви лише за бажанням.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="map">
   <div class="container">
-    <h2 class="sec-title">Часті питання</h2>
-    <p class="sec-sub">Якщо вашого питання тут немає — напишіть нам.</p>
-    <div class="faq-item"><div class="faq-q">Що вдягнути? <span>+</span></div><div class="faq-a">Що завгодно зручне. Дрес-коду немає.</div></div>
-    <div class="faq-item"><div class="faq-q">Чи можна з дітьми? <span>+</span></div><div class="faq-a">Так! Діти — бажані гості. Їм буде цікаво і смачно.</div></div>
-    <div class="faq-item"><div class="faq-q">Я не вегетаріанець — мені можна? <span>+</span></div><div class="faq-a">Звісно. Більшість гостей теж не вегетаріанці. Просто спробуйте.</div></div>
-    <div class="faq-item"><div class="faq-q">Скільки це коштує? <span>+</span></div><div class="faq-a">Нічого. Вхід вільний, обід безкоштовний. Пожертви — лише за бажанням.</div></div>
-    <div class="faq-item"><div class="faq-q">Що таке «прасад»? <span>+</span></div><div class="faq-a">Їжа, приготована з любов'ю і запропонована Богу. Вважається, що вона очищує свідомість.</div></div>
+    <h2 class="sec-title">Як нас знайти</h2>
+    <p class="sec-sub">вул. Скальда (Комарова), 40А, Чернівці</p>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.5!2d25.93!3d48.29!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDE3JzI0LjAiTiAyNcKwNTUnNDguMCJF!5e0!3m2!1suk!2sua!4v1234567890" loading="lazy" title="Карта храму"></iframe>
+    </div>
+    <p style="text-align:center;margin-top:24px"><a href="https://maps.app.goo.gl/rz1nyMWUVKGSP29Z6" class="btn btn-gold" target="_blank" rel="noopener">✦ Прокласти маршрут</a></p>
   </div>
 </section>
 
 <section class="cta">
   <div class="container">
-    <h2>Май сміливість дізнатися</h2>
-    <p>Твій шлях до усвідомленості починається тут, у Чернівцях. Щонеділі о 13:30.</p>
-    <a href="#contacts" class="btn btn-primary" style="font-size:1.2rem;padding:16px 40px">Приєднатися до руху</a>
+    <h2>Трансформуй свій світ</h2>
+    <p>Відкрий містичну глибину буття. Щонеділі о 13:30 — ми чекаємо саме на вас.</p>
+    <a href="#contacts" class="btn btn-gold" style="font-size:1.2rem;padding:18px 48px">Почати трансформацію</a>
   </div>
 </section>
 
 <footer id="contacts">
   <div class="container">
     <div class="grid3">
-      <div><h4>Контакти</h4><a href="#">📍 вул. Скальда, 40А, Чернівці</a><a href="#">📱 Telegram — підписуйтесь та будьте в курсі всіх подій!</a><a href="#">📸 Instagram</a><a href="#">▶️ YouTube</a></div>
-      <div><h4>Навігація</h4><a href="#about">Про нас</a><a href="#program">Програма</a><a href="#ffl">Їжа Життя</a><a href="#faq">Питання</a></div>
-      <div><h4>Підтримати</h4><a href="#">💳 Пожертвувати</a><a href="#">🤝 Стати волонтером</a><p style="opacity:.6;font-size:.9rem;margin-top:10px">Кожна гривня йде на прасад і розвиток храму.</p></div>
+      <div><h4>✦ Контакти</h4><a href="#">📍 вул. Скальда, 40А, Чернівці</a><a href="#">📱 Telegram — підписуйтесь та будьте в курсі всіх подій!</a><a href="#">📸 Instagram</a><a href="#">▶️ YouTube</a></div>
+      <div><h4>✦ Навігація</h4><a href="#about">Про нас</a><a href="#program">Програма</a><a href="#philosophy">Філософія</a><a href="#ffl">Їжа Життя</a><a href="#courses">Курси</a></div>
+      <div><h4>✦ Підтримати</h4><a href="#donation">💳 Пожертвувати</a><a href="#contacts">🤝 Стати волонтером</a><p style="opacity:.5;font-size:.9rem;margin-top:10px">Ваша підтримка — це тепло для тих, хто його потребує.</p></div>
     </div>
-    <div class="copyright">© 2026 ІСККОН Чернівці · Харе Крішна</div>
+    <div class="copyright">© 2026 ІСККОН Чернівці · Харе Крішна ✦</div>
   </div>
 </footer>
 
 <script>
 document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});
+// Scroll reveal
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('section .container > *').forEach(el=>{el.classList.add('reveal');io.observe(el)});
+document.querySelectorAll('.step').forEach((el,i)=>{setTimeout(()=>io.observe(el),i*100)});
+// Плаваючі частинки в hero
+const hero=document.querySelector('.hero');
+if(hero){const p=document.createElement('div');p.className='particles';hero.appendChild(p);
+for(let i=0;i<24;i++){const s=document.createElement('div');s.className='particle';
+s.style.left=Math.random()*100+'%';s.style.animationDuration=(6+Math.random()*8)+'s';
+s.style.animationDelay=(Math.random()*8)+'s';s.style.width=s.style.height=(2+Math.random()*4)+'px';p.appendChild(s)}}
+// Анімовані лічильники
+const cio=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target)}})},{threshold:.5});
+function animCount(el){const t=el.textContent;const n=parseFloat(t.replace(/[^0-9.]/g,''));if(isNaN(n))return;const suf=t.replace(/[0-9.,\s]/g,'');let cur=0;const iv=setInterval(()=>{cur+=n/40;if(cur>=n){cur=n;clearInterval(iv)}el.textContent=Math.round(cur).toLocaleString('uk-UA')+suf},30)}
+document.querySelectorAll('.stat-num').forEach(el=>cio.observe(el));
 </script>
 </body>
 </html>
